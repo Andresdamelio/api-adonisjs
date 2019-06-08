@@ -1,31 +1,18 @@
-# Adonis fullstack application
+# Api AdonisJS con MongoDB
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+Api de tareas creada con adonisJS y MongoDb con las operaciones.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+1. Crear
+2. Editar
+3. Obtener todas las tareas
+4. Obterner tarea
+5. Eliminar tarea
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Use este comando para usarla
 
 ```bash
-adonis new yardstick
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
+npm install
+adonis serve --dev
 ```

@@ -40,6 +40,25 @@ class TaskController {
         return response.status(200).json(task);
 
     }
+
+    async delete({params, response}){
+        const task = await Task.find(params.id);
+        if( !task ){
+            return response.status(404).json({
+                ok:false,
+                err: {
+                    message: 'El producto no existe'
+                }
+            });
+        }
+
+        await task.delete()
+
+        return response.status(200).json({
+            ok: true,
+            message: 'El producto se ha eliminado con exito'
+        })
+    }
 }
 
 module.exports = TaskController
